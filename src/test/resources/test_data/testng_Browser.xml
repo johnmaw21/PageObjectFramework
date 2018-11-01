@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="BrowserTestSuite">
+	<listeners>
+		<listener class-name="com.dice.base.TestListener"></listener>
+	</listeners>
+
+	<test name="LogInTest-FF">
+		<parameter name="browser" value="firefox" />
+		<groups>
+			<run>
+				<exclude name="broken"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.dice.LogInTest">
+			</class>
+		</classes>
+	</test>
+
+	<test name="LogInTest-CH">
+		<parameter name="browser" value="chrome" />
+		<groups>
+			<run>
+				<exclude name="broken"></exclude>
+			</run>
+		</groups>
+		<classes>
+			<class name="com.dice.LogInTest">
+			</class>
+		</classes>
+	</test>
+
+</suite>
